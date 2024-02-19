@@ -45,6 +45,10 @@ When starting a **new** Python project...
 
 4. Use `poetry add [package]` to install packages to the project's virtual environment and write dependencies to the *poetry.lock* file.
 
+5. Ensure that VS Code is using the correct interpreter.
+    - Use `poetry env info --path` in the **project's** integrated terminal to find the virtual environment path.
+    - In VSCode, use the **Python: Select Interpreter** command, then copy/paste the path in the **Enter interpreter path...** option.
+
 When continuing a **current** Python project...
 
 1. Always ensure the parent project contains a *pyproject.toml* file.
