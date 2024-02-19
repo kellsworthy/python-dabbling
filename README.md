@@ -5,7 +5,7 @@
 
 ## *notes-for-myself*
 
-See [this link](https://www.markdownguide.org/basic-syntax/) for a markdown guide.
+See [this link](https://www.markdownguide.org/basic-syntax/) for a markdown guide.  
 See [this link](https://www.jcchouinard.com/gitignore-template/) for a template to have GitHub ignore specific files/repositiories.
 
 When saving changes to GitHub...
@@ -22,16 +22,16 @@ See [this link](https://hackersandslackers.com/python-poetry-package-manager/) f
 
 When starting a **new** Python project...
 
-1. Use `poetry new [name]` in the **project's** integrated terminal to create a project folder structure. It will look like the following:
+1. Use `poetry new --src [name]` in the **project's** integrated terminal to create a src project folder structure (remove the `--src` to create a flat project folder structure instead). It will look like the following:
 
 > projname *(project folder)*  
 > ├─ pyproject.toml *(Poetry file)*  
 > ├─ README.md *(markdown file)*  
-> ├─ projname *(package subfolder)*  
->     └── _ _init _ _.py  
-> ├─ tests *(testing subfolder)*  
->     └── _ _init _ _.py  
->     └── test_projname.py
+> ├─ src *(import subfolder)*  
+> &nbsp;│ &nbsp; &nbsp; &nbsp; └── projname  
+> &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; └── _ _init _ _.py  
+> └─ tests *(testing subfolder)*  
+> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; └── _ _init _ _.py  
 
 2. Remove any unnecessary files/folders.
     - The Poetry file, *pyproject.toml*, is critical. It contains the project's metadata, defines dependencies and version requirements, xxx
