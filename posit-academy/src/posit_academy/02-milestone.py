@@ -1,7 +1,6 @@
 # Import packages used.
 import pandas as pd
-from plotnine import *
-import numpy as np
+from plotnine import ggplot, aes, geom_point, geom_line, labs
 from matplotlib import pyplot
 
 # Set pandas options for column display and enabling copy.
@@ -15,7 +14,8 @@ indexes = pd.read_csv('/Users/kellsworth/Developer/GitHub/python-dabbling/posit-
 indexgspc = indexes.loc[indexes['symbol'] == '^GSPC']
 
 # Create scatterplot of GSPC ticker with each data point connected by a line.
-(ggplot(data=indexgspc, mapping=aes(x='date', y='adjusted'))
+(
+    ggplot(data=indexgspc, mapping=aes(x='date', y='adjusted'))
     + geom_point()
     + geom_line(group=1)
     + labs(title='Price history for ^GSPC')
@@ -25,7 +25,8 @@ indexgspc = indexes.loc[indexes['symbol'] == '^GSPC']
 indextnx = indexes.loc[indexes['symbol'] == '^TNX']
 
 # Create scatterplot of GSPC ticker with each data point connected by a line.
-(ggplot(data=indextnx, mapping=aes(x='date', y='adjusted'))
+(
+    ggplot(data=indextnx, mapping=aes(x='date', y='adjusted'))
     + geom_point()
     + geom_line(group=1)
     + labs(title='Price history for ^TNX')
@@ -58,15 +59,15 @@ xmaxtnx = indextnx['adjusted'].argmax()
 
 # Annotate plots with max values.
 axisgspc.annotate(
-    f'GSPC max: {ymaxgspc:.0f}', 
-    xy=(xmaxgspc, ymaxgspc), 
-    xytext=(xmaxgspc-90, ymaxgspc+10), 
+    f'GSPC max: {ymaxgspc:.0f}',
+    xy=(xmaxgspc, ymaxgspc),
+    xytext=(xmaxgspc-90, ymaxgspc+10),
     arrowprops=dict(arrowstyle='fancy')
 )
 axistnx.annotate(
-    f'TNX max: {ymaxtnx:.2f}', 
-    xy=(xmaxtnx, ymaxtnx), 
-    xytext=(xmaxtnx+15, ymaxtnx-0.02), 
+    f'TNX max: {ymaxtnx:.2f}',
+    xy=(xmaxtnx, ymaxtnx),
+    xytext=(xmaxtnx+15, ymaxtnx-0.02),
     arrowprops=dict(arrowstyle='fancy')
 )
 
