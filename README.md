@@ -22,7 +22,7 @@ See [this link](https://hackersandslackers.com/python-poetry-package-manager/) f
 
 When starting a **new** Python project...
 
-1. Use `poetry new --src [name]` in the **project's** integrated terminal to create a src project folder structure (remove the `--src` to create a flat project folder structure instead). It will look like the following:
+1. Use `poetry new --src [name]` in the **repository's** integrated terminal to create a src project folder structure (remove the `--src` to create a flat project folder structure instead). It will look like the following:
 
 > projname *(project folder)*  
 > ├─ pyproject.toml *(Poetry file)*  
