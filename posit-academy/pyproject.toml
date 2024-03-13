@@ -8,11 +8,8 @@ packages = [{include = "posit_academy", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
-pandas = "^2.2.0"
-plotnine = "^0.13.0"
-numpy = "^1.26.4"
-matplotlib = "^3.8.3"
-ipykernel = "^6.29.3"
+jupyter = "^1.0.0"
+pandas = "^2.2.1"
 
 
 [build-system]
